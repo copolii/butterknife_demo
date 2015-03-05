@@ -41,6 +41,11 @@ public class FragmentInjection extends Fragment {
         header.setImageResource (R.drawable.big_buttery_header);
     }
 
+    @Override public void onDestroyView () {
+        super.onDestroyView ();
+        ButterKnife.reset (this);
+    }
+
     @OnClick (R.id.left) public void onTap () {
         registerTap ();
     }

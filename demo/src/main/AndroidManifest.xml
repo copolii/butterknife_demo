@@ -28,6 +28,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".IndexActivity"/>
         </activity>
+
+        <activity android:name=".activity.ViewListInjectionActivity"
+                  android:parentActivityName=".IndexActivity"
+                  android:label="@string/fragment_injection">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".IndexActivity"/>
+        </activity>
     </application>
 
 </manifest>

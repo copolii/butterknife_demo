@@ -14,6 +14,7 @@ import android.widget.ListView;
 
 import ca.mahram.demo.butterknife.activity.ActivityInjectionActivity;
 import ca.mahram.demo.butterknife.activity.FragmentInjectionActivity;
+import ca.mahram.demo.butterknife.activity.ViewListInjectionActivity;
 import ca.mahram.demo.butterknife.misc.ListItemRow;
 
 public class IndexActivity
@@ -25,7 +26,8 @@ public class IndexActivity
 
     private enum DemoActivity {
         ACTIVITY_INJECTION (R.string.activity_injection, ActivityInjectionActivity.class),
-        FRAGMENT_INJECTION (R.string.fragment_injection, FragmentInjectionActivity.class);
+        FRAGMENT_INJECTION (R.string.fragment_injection, FragmentInjectionActivity.class),
+        VIEWLIST_INJECTION (R.string.view_list_injection, ViewListInjectionActivity.class);
 
         @StringRes final int                       title;
         final            Class<? extends Activity> activity;
@@ -58,7 +60,7 @@ public class IndexActivity
     private class DemoAdapter
       extends BaseAdapter {
         private final DemoActivity[] activities = DemoActivity.values ();
-        private final LayoutInflater inflater = LayoutInflater.from (IndexActivity.this);
+        private final LayoutInflater inflater   = LayoutInflater.from (IndexActivity.this);
 
         @Override public int getCount () {
             return activities.length;
