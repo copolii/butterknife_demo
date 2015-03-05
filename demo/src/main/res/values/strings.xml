@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Butterknife Demo</string>
+    <string name="activity_injection">Activity View Injection</string>
+    <string name="default_prompt">Welcome to the Butterknife Demo. Tap a button or something!</string>
+    <string name="not_tapped">Not tapped.</string>
+    <string name="tapped_multiple">Tapped %1$d times</string>
+    <string name="tapped_single">Tapped once</string>
+    <string name="tapped_twice">Tapped twice</string>
+    <string name="left">Left</string>
+    <string name="right">Right</string>
+
+    <string name="input_has_focus">Input box has focus</string>
+    <string name="input_no_focus">Input box doesn\'t have focus</string>
+
+    <plurals name="tapped_d_times">
+        <item quantity="one" >@string/tapped_single</item>
+        <item quantity="two" >@string/tapped_twice</item>
+        <item quantity="other">@string/tapped_multiple</item>
+    </plurals>
+</resources>
