@@ -11,6 +11,7 @@
 
     <string name="input_has_focus">Input box has focus</string>
     <string name="input_no_focus">Input box doesn\'t have focus</string>
+    <string name="fragment_injection">Fragment View Injection</string>
 
     <plurals name="tapped_d_times">
         <item quantity="one" >@string/tapped_single</item>

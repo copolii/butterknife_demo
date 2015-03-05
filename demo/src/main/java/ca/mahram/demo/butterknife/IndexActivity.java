@@ -13,6 +13,7 @@ import android.widget.BaseAdapter;
 import android.widget.ListView;
 
 import ca.mahram.demo.butterknife.activity.ActivityInjectionActivity;
+import ca.mahram.demo.butterknife.activity.FragmentInjectionActivity;
 import ca.mahram.demo.butterknife.misc.ListItemRow;
 
 public class IndexActivity
@@ -23,7 +24,8 @@ public class IndexActivity
     private DemoAdapter adapter;
 
     private enum DemoActivity {
-        ACTIVITY_INJECTION (R.string.activity_injection, ActivityInjectionActivity.class);
+        ACTIVITY_INJECTION (R.string.activity_injection, ActivityInjectionActivity.class),
+        FRAGMENT_INJECTION (R.string.fragment_injection, FragmentInjectionActivity.class);
 
         @StringRes final int                       title;
         final            Class<? extends Activity> activity;
@@ -53,7 +55,8 @@ public class IndexActivity
         startActivity (new Intent (this, adapter.getItem (position).activity));
     }
 
-    private class DemoAdapter extends BaseAdapter {
+    private class DemoAdapter
+      extends BaseAdapter {
         private final DemoActivity[] activities = DemoActivity.values ();
         private final LayoutInflater inflater = LayoutInflater.from (IndexActivity.this);
 
