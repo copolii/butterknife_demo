@@ -86,6 +86,7 @@
             android:layout_height="wrap_content"/>
 
         <EditText
+            android:hint="@string/steal_focus"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
     </LinearLayout>

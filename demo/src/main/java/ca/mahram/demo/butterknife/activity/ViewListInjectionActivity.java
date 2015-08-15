@@ -12,8 +12,7 @@ import java.util.List;
 import java.util.Locale;
 
 import butterknife.ButterKnife;
-import butterknife.InjectView;
-import butterknife.InjectViews;
+import butterknife.Bind;
 import butterknife.OnCheckedChanged;
 import butterknife.OnClick;
 import ca.mahram.demo.butterknife.R;
@@ -26,19 +25,19 @@ public class ViewListInjectionActivity
   extends BaseDemoActivity
   implements SeekBar.OnSeekBarChangeListener {
 
-    @InjectViews ( {R.id.image_1, R.id.image_2, R.id.image_3, R.id.image_4, R.id.image_5, R.id.image_6})
+    @Bind ( {R.id.image_1, R.id.image_2, R.id.image_3, R.id.image_4, R.id.image_5, R.id.image_6})
     List<ImageView> images;
 
-    @InjectViews ({R.id.button_1, R.id.button_2, R.id.button_3, R.id.button_4, R.id.button_5, R.id.button_6})
+    @Bind ({R.id.button_1, R.id.button_2, R.id.button_3, R.id.button_4, R.id.button_5, R.id.button_6})
     List<Button> buttons;
 
-    @InjectView (R.id.alpha_seeker) SeekBar  alphaSeeker;
-    @InjectView (R.id.alpha_value)  TextView alphaValue;
+    @Bind (R.id.alpha_seeker) SeekBar  alphaSeeker;
+    @Bind (R.id.alpha_value)  TextView alphaValue;
 
     @Override protected void onCreate (final Bundle savedInstanceState) {
         super.onCreate (savedInstanceState);
         setContentView (R.layout.activity_viewlist_injection);
-        ButterKnife.inject (this);
+        ButterKnife.bind (this);
 
         alphaSeeker.setOnSeekBarChangeListener (this);
         alphaSeeker.setProgress (alphaSeeker.getMax ());

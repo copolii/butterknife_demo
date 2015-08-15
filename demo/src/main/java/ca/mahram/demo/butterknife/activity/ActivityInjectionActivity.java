@@ -7,7 +7,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import butterknife.ButterKnife;
-import butterknife.InjectView;
+import butterknife.Bind;
 import butterknife.OnCheckedChanged;
 import butterknife.OnClick;
 import butterknife.OnFocusChange;
@@ -20,17 +20,17 @@ import ca.mahram.demo.butterknife.activity.base.BaseDemoActivity;
 public class ActivityInjectionActivity
   extends BaseDemoActivity {
 
-    @InjectView (R.id.header_image)  ImageView header;
-    @InjectView (R.id.click_counter) TextView  clickCounter;
-    @InjectView (R.id.focus_check)   CheckBox  focusCheck;
-    @InjectView (R.id.focus_text)    TextView  focusText;
+    @Bind (R.id.header_image)  ImageView header;
+    @Bind (R.id.click_counter) TextView  clickCounter;
+    @Bind (R.id.focus_check)   CheckBox  focusCheck;
+    @Bind (R.id.focus_text)    TextView  focusText;
 
     private int tapCount = 0;
 
     @Override protected void onCreate (final Bundle savedInstanceState) {
         super.onCreate (savedInstanceState);
         setContentView (R.layout.activity_injection);
-        ButterKnife.inject (this);
+        ButterKnife.bind (this);
 
         header.setImageResource (R.drawable.big_buttery_header);
     }

@@ -12,7 +12,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import butterknife.ButterKnife;
-import butterknife.InjectView;
+import butterknife.Bind;
 import butterknife.OnCheckedChanged;
 import butterknife.OnClick;
 import butterknife.OnFocusChange;
@@ -22,10 +22,10 @@ import ca.mahram.demo.butterknife.R;
  Created by mahram on 15-03-04.
  */
 public class FragmentInjection extends Fragment {
-    @InjectView (R.id.header_image)  ImageView header;
-    @InjectView (R.id.click_counter) TextView  clickCounter;
-    @InjectView (R.id.focus_check)   CheckBox  focusCheck;
-    @InjectView (R.id.focus_text)    TextView  focusText;
+    @Bind (R.id.header_image)  ImageView header;
+    @Bind (R.id.click_counter) TextView  clickCounter;
+    @Bind (R.id.focus_check)   CheckBox  focusCheck;
+    @Bind (R.id.focus_text)    TextView  focusText;
 
     private int tapCount = 0;
 
@@ -37,13 +37,13 @@ public class FragmentInjection extends Fragment {
 
     @Override public void onViewCreated (final View view, final Bundle savedInstanceState) {
         super.onViewCreated (view, savedInstanceState);
-        ButterKnife.inject (this, view);
+        ButterKnife.bind (this, view);
         header.setImageResource (R.drawable.big_buttery_header);
     }
 
     @Override public void onDestroyView () {
         super.onDestroyView ();
-        ButterKnife.reset (this);
+        ButterKnife.unbind (this);
     }
 
     @OnClick (R.id.left) public void onTap () {

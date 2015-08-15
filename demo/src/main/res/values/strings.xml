@@ -20,6 +20,7 @@
     <string name="button_3">Button 3</string>
     <string name="button_2">Button 2</string>
     <string name="view_list_injection">View List Injection</string>
+    <string name="steal_focus">Use this EditText to steal focus from above</string>
 
     <plurals name="tapped_d_times">
         <item quantity="one" >@string/tapped_single</item>
