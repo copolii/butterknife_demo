@@ -21,7 +21,7 @@ import ca.mahram.demo.butterknife.activity.base.BaseDemoActivity;
 /**
  Created by mahram on 15-03-04.
  */
-public class ViewListInjectionActivity
+public class ViewListBindingActivity
   extends BaseDemoActivity
   implements SeekBar.OnSeekBarChangeListener {
 
@@ -36,7 +36,7 @@ public class ViewListInjectionActivity
 
     @Override protected void onCreate (final Bundle savedInstanceState) {
         super.onCreate (savedInstanceState);
-        setContentView (R.layout.activity_viewlist_injection);
+        setContentView (R.layout.activity_viewlist_binding);
         ButterKnife.bind (this);
 
         alphaSeeker.setOnSeekBarChangeListener (this);

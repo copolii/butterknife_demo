@@ -1,11 +1,6 @@
-package ca.mahram.demo.butterknife.fragment;
+package ca.mahram.demo.butterknife.activity;
 
-import android.app.Fragment;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.ImageView;
@@ -17,11 +12,14 @@ import butterknife.OnCheckedChanged;
 import butterknife.OnClick;
 import butterknife.OnFocusChange;
 import ca.mahram.demo.butterknife.R;
+import ca.mahram.demo.butterknife.activity.base.BaseDemoActivity;
 
 /**
  Created by mahram on 15-03-04.
  */
-public class FragmentInjection extends Fragment {
+public class BindingActivity
+  extends BaseDemoActivity {
+
     @Bind (R.id.header_image)  ImageView header;
     @Bind (R.id.click_counter) TextView  clickCounter;
     @Bind (R.id.focus_check)   CheckBox  focusCheck;
@@ -29,21 +27,12 @@ public class FragmentInjection extends Fragment {
 
     private int tapCount = 0;
 
-    @Nullable @Override public View onCreateView (final LayoutInflater inflater,
-                                                  final ViewGroup container,
-                                                  final Bundle savedInstanceState) {
-        return inflater.inflate (R.layout.activity_injection, container, false);
-    }
+    @Override protected void onCreate (final Bundle savedInstanceState) {
+        super.onCreate (savedInstanceState);
+        setContentView (R.layout.activity_binding);
+        ButterKnife.bind (this);
 
-    @Override public void onViewCreated (final View view, final Bundle savedInstanceState) {
-        super.onViewCreated (view, savedInstanceState);
-        ButterKnife.bind (this, view);
         header.setImageResource (R.drawable.big_buttery_header);
-    }
-
-    @Override public void onDestroyView () {
-        super.onDestroyView ();
-        ButterKnife.unbind (this);
     }
 
     @OnClick (R.id.left) public void onTap () {

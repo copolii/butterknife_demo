@@ -13,7 +13,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".activity.ActivityInjectionActivity"
+        <activity android:name=".activity.BindingActivity"
                   android:parentActivityName=".IndexActivity"
                   android:label="@string/activity_injection">
             <meta-data
@@ -21,7 +21,7 @@
                 android:value=".IndexActivity"/>
         </activity>
 
-        <activity android:name=".activity.FragmentInjectionActivity"
+        <activity android:name=".activity.FragmentBindingActivity"
                   android:parentActivityName=".IndexActivity"
                   android:label="@string/fragment_injection">
             <meta-data
@@ -29,7 +29,7 @@
                 android:value=".IndexActivity"/>
         </activity>
 
-        <activity android:name=".activity.ViewListInjectionActivity"
+        <activity android:name=".activity.ViewListBindingActivity"
                   android:parentActivityName=".IndexActivity"
                   android:label="@string/fragment_injection">
             <meta-data

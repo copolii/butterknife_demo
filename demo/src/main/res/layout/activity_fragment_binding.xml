@@ -5,9 +5,9 @@
              android:layout_height="match_parent">
 
     <fragment
-        class="ca.mahram.demo.butterknife.fragment.FragmentInjection"
+        class="ca.mahram.demo.butterknife.fragment.BindingFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:layout="@layout/activity_injection"
+        tools:layout="@layout/activity_binding"
         android:id="@+id/injection_fragment"/>
 </FrameLayout>

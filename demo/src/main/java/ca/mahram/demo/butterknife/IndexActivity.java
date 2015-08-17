@@ -12,9 +12,9 @@ import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
 
-import ca.mahram.demo.butterknife.activity.ActivityInjectionActivity;
-import ca.mahram.demo.butterknife.activity.FragmentInjectionActivity;
-import ca.mahram.demo.butterknife.activity.ViewListInjectionActivity;
+import ca.mahram.demo.butterknife.activity.BindingActivity;
+import ca.mahram.demo.butterknife.activity.FragmentBindingActivity;
+import ca.mahram.demo.butterknife.activity.ViewListBindingActivity;
 import ca.mahram.demo.butterknife.misc.ListItemRow;
 
 public class IndexActivity
@@ -25,9 +25,9 @@ public class IndexActivity
     private DemoAdapter adapter;
 
     private enum DemoActivity {
-        ACTIVITY_INJECTION (R.string.activity_injection, ActivityInjectionActivity.class),
-        FRAGMENT_INJECTION (R.string.fragment_injection, FragmentInjectionActivity.class),
-        VIEWLIST_INJECTION (R.string.view_list_injection, ViewListInjectionActivity.class);
+        ACTIVITY_INJECTION (R.string.activity_injection, BindingActivity.class),
+        FRAGMENT_INJECTION (R.string.fragment_injection, FragmentBindingActivity.class),
+        VIEWLIST_INJECTION (R.string.view_list_injection, ViewListBindingActivity.class);
 
         @StringRes final int                       title;
         final            Class<? extends Activity> activity;
